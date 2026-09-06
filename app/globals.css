@@ -11,5 +11,7 @@ button, input, select { font: inherit; }
 .site-shell { width: min(100% - 2rem, 1180px); margin-inline: auto; }
 .field { display: block; width: 100%; margin-top: .5rem; border: 1px solid color-mix(in srgb, var(--color-mill) 35%, transparent); background: transparent; padding: .8rem .9rem; color: var(--color-mill); border-radius: 0; }
 .field::placeholder { color: color-mix(in srgb, var(--color-mill) 55%, transparent); }
-.field option { color: var(--color-steel); }
+select.field { background-color: var(--color-steel); color: var(--color-mill); color-scheme: dark; }
+select.field option { background-color: var(--color-steel); color: var(--color-mill); }
+select.field option:disabled { color: var(--color-accent-grey); }
 @media (min-width: 640px) { .site-shell { width: min(100% - 4rem, 1180px); } }

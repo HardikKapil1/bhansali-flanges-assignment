@@ -1,69 +1,20 @@
-import Image from "next/image";
+import EnquiryBar from "@/app/components/EnquiryBar";
+import EnquiryForm from "@/app/components/EnquiryForm";
+import ProductConfigurator from "@/app/components/ProductConfigurator";
+import Certifications from "@/app/components/Certifications";
+import ShippingInfo from "@/app/components/ShippingInfo";
 
 export default function Home() {
-  return (
-    <div className="flex flex-col flex-1 items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex flex-1 w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert h-5 w-[100px]"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the{" "}
-            <code className="rounded bg-black/[.06] px-1.5 py-0.5 font-mono text-[0.9em] dark:bg-white/[.08]">
-              page.tsx
-            </code>{" "}
-            file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert h-[14px] w-4"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
-    </div>
-  );
+  return <>
+    <EnquiryBar />
+    <header className="border-b border-steel/15 bg-mill"><nav aria-label="Primary navigation" className="site-shell flex h-20 items-center justify-between"><a href="#top" className="font-display text-lg font-semibold tracking-[-0.05em] text-steel">BHANSALI <span className="text-accent">FLANGES</span></a><a href="#enquiry" className="hidden border-b border-accent pb-1 font-body text-sm font-semibold text-steel sm:block">Request a quotation</a></nav></header>
+    <main id="top">
+      <section className="border-b border-steel/15 bg-mill py-14 md:py-20"><div className="site-shell"><p className="mb-5 font-body text-sm font-medium text-steel/60">Stainless steel export supply · Saudi Arabia · UAE · Middle East</p><div className="grid gap-10 lg:grid-cols-[minmax(0,1fr)_420px] lg:items-end"><div><h1 className="max-w-3xl font-display text-5xl font-semibold leading-[0.92] tracking-[-0.07em] text-steel sm:text-6xl md:text-7xl">Stainless steel<br />flanges.</h1><p className="mt-7 max-w-xl font-body text-lg leading-7 text-steel/70">Export-ready ASTM and ASME flanges with traceable material documentation, supplied for process, water and energy projects across the Gulf.</p></div><aside aria-label="Key product specifications" className="border-l-2 border-accent bg-steel px-6 py-6 text-mill sm:px-7"><p className="font-body text-xs font-semibold tracking-[0.12em] text-mill/55">AT A GLANCE</p><dl className="mt-5 grid grid-cols-2 gap-x-6 gap-y-5 font-body"><div><dt className="text-xs text-mill/55">Sizes</dt><dd className="mt-1 text-sm font-semibold">½″ – 24″</dd></div><div><dt className="text-xs text-mill/55">Pressure class</dt><dd className="mt-1 text-sm font-semibold">150 – 2500</dd></div><div><dt className="text-xs text-mill/55">Standards</dt><dd className="mt-1 text-sm font-semibold">ASME B16.5</dd></div><div><dt className="text-xs text-mill/55">Mill test report</dt><dd className="mt-1 text-sm font-semibold">EN 10204 3.1</dd></div></dl></aside></div></div></section>
+      <ProductConfigurator />
+      <Certifications />
+      <ShippingInfo />
+      <section id="enquiry" aria-labelledby="enquiry-heading" className="border-t border-steel/15 bg-steel py-14 md:py-20"><div className="site-shell grid gap-10 lg:grid-cols-[0.85fr_1.15fr] lg:gap-20"><div><p className="font-body text-sm font-medium text-mill/55">Project or stock requirement</p><h2 id="enquiry-heading" className="mt-4 max-w-md font-display text-4xl font-semibold leading-[0.95] tracking-[-0.06em] text-mill md:text-5xl">Tell us what your project needs.</h2><p className="mt-6 max-w-md font-body leading-7 text-mill/70">Include your flange type, size, grade and quantity. Our export desk will respond with availability and a commercial quotation.</p></div><EnquiryForm /></div></section>
+    </main>
+    <footer className="bg-steel pb-24 text-mill sm:pb-7"><div className="site-shell border-t border-mill/15 pt-6 font-body text-sm text-mill/55 sm:flex sm:items-center sm:justify-between"><p>Bhansali Flanges · Stainless steel export supply</p><p className="mt-2 sm:mt-0">Saudi Arabia · UAE · Middle East</p></div></footer>
+  </>;
 }

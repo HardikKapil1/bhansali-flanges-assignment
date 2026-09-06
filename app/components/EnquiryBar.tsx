@@ -1,4 +1,3 @@
-// PLACEHOLDER CONTACTS: replace the phone, WhatsApp number and email below before launch.
 const phone = "+91 9528088615";
 const whatsapp = "919528088615";
 const email = "kapilhardik11@gmail.com";

@@ -9,9 +9,11 @@ body { margin: 0; background: theme(colors.mill); color: theme(colors.steel); fo
 button, input, select { font: inherit; }
 :focus-visible { outline: 2px solid theme(colors.accent); outline-offset: 3px; }
 .site-shell { width: min(100% - 2rem, 1180px); margin-inline: auto; }
-.field { display: block; width: 100%; margin-top: .5rem; border: 1px solid color-mix(in srgb, var(--color-mill) 35%, transparent); background: transparent; padding: .8rem .9rem; color: var(--color-mill); border-radius: 0; }
-.field::placeholder { color: color-mix(in srgb, var(--color-mill) 55%, transparent); }
-select.field { background-color: var(--color-steel); color: var(--color-mill); color-scheme: dark; }
-select.field option { background-color: var(--color-steel); color: var(--color-mill); }
-select.field option:disabled { color: var(--color-accent-grey); }
+.field { display: block; width: 100%; min-height: 3.25rem; margin-top: .5rem; border: 1px solid rgba(245, 244, 241, .52); background-color: rgba(245, 244, 241, .1); padding: .8rem .9rem; color: #F5F4F1; border-radius: 0; transition: border-color 150ms ease, background-color 150ms ease; }
+.field::placeholder { color: rgba(245, 244, 241, .62); }
+.field:hover { border-color: rgba(245, 244, 241, .78); background-color: rgba(245, 244, 241, .14); }
+.field:focus { border-color: #C24A1F; background-color: rgba(245, 244, 241, .16); outline: none; }
+select.field { background-color: #1C1F22; color: #F5F4F1; color-scheme: dark; }
+select.field option { background-color: #F5F4F1; color: #1C1F22; }
+select.field option:disabled { color: #5D6267; }
 @media (min-width: 640px) { .site-shell { width: min(100% - 4rem, 1180px); } }

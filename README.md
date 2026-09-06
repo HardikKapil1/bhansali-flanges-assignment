@@ -15,7 +15,7 @@ Open `http://localhost:3000`. Build verification: `npm run build`.
 
 - `app/components/EnquiryBar.tsx`: phone number, WhatsApp number and export email.
 - `app/layout.tsx`: replace the documented `GTM-XXXXXXX` placeholder with the real Google Tag Manager container snippet/ID.
-- `app/api/enquiry/route.ts`: replace the `console.log` with the Google Sheets or CRM integration. The documented payload is `{ name, email, phone, productInterest, timestamp }`.
+- Add `GOOGLE_SHEET_WEBHOOK_URL` to `.env.local` with your deployed Google Apps Script Web App URL. `app/api/enquiry/route.ts` posts `{ name, email, phone, productInterest, timestamp }` to it and retains a local debug log.
 
 ## Feature checks
 
